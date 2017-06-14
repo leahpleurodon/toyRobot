@@ -40,7 +40,7 @@ describe Robot do
       :y => 1,
       :f => "WEST")
     end
-    it "shouldn't allow movement beofre placement" do
+    it "shouldn't allow movement before placement" do
       @robot = Robot.new
       expect { @robot.move }.to raise_error(NoPlaceError)
     end

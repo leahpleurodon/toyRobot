@@ -5,8 +5,26 @@ class EdgeError < StandardError
   end
 end
 
+class PlaceOffTable < StandardError
+  def to_s
+      "You Cannot place a bot off the table."
+  end
+end
+
 class NoPlaceError < StandardError
   def to_s
-      "You can't move a bot you haven't placed. Place the bot first."
+      "You can't move a bot you haven't placed. Place the bot first. Please read the README and try again"
+  end
+end
+
+class NoSuchCommand < StandardError
+  def to_s
+      "The command you entered doesn't exist or was entered incorrectly. Please read the README and try again"
+  end
+end
+
+class InvalidArgs < StandardError
+  def to_s
+      "One of the arguments in your command is not correct. Please read the README and try again"
   end
 end

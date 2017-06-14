@@ -11,14 +11,9 @@
     newIndex = (oldIndex + step) % array.length
     return newIndex #return index not value
   end
-
-#checkCoord method: - checks if x or y position is max
-  def checkCoord(coord)
-    if coord == $table[:min]
-      return :atmin
-    elsif coord == $table[:max]
-      return :atmax
-    else
-      return :hasroom
-    end
+#check if string is an integer in string form
+class String
+  def is_integer?
+    self.to_i.to_s == self
   end
+end
